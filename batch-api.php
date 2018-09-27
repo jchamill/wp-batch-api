@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Batch API
- * Plugin URI: https://www.github.com/jchamill
+ * Plugin URI: https://github.com/jchamill/wp-batch-api
  * Description: Exposes a batch api for plugin development.
  * Version: 0.0.1
  * Author: JC Hamill
