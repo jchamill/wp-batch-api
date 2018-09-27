@@ -55,14 +55,18 @@ class BatchAPI {
   }
 
   public function start() {
-    if ( isset( $_GET['batch_id'] ) ) {
-      print '<div class="wrap">';
+    $batch = $this->getBatch( $_GET['batch_id'] );
+    print '<div class="wrap">';
+    if ( $batch ) {
       print '<div id="batchapi-status" class="batchapi-ready" data-batch="' . esc_attr( $_GET['batch_id'] ) . '">';
       print '<h2>Working...</h2>';
       print '<div style="width:0;height:50px;background-color:#00A8EF;"></div>';
       print '</div>';
-      print '</div>';
+    } else {
+      print '<h2>Batch API</h2>';
+      print '<p>This batch has already been processed.';
     }
+    print '</div>';
   }
 
   public function process() {
